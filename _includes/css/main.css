@@ -111,8 +111,8 @@ hr {
 
 /* ----- top menu ----- */
 
-{% assign navborder = 3 %}
-{% assign navborder_active = 6 %}
+{% assign navborder = 6 %}
+{% assign navborder_active = 10 %}
 
 nav {
   font-size:15px;
@@ -121,21 +121,23 @@ nav {
   z-index:100;
   top:0;
   left:0;
-  background:#fff;
+  /* background:#49a7e9; */
+  background:#0fbfcf;
 }
 
 nav ul {
   list-style:none;
   text-align:center;
-  padding:0;
+  padding:-10px;
   margin:0;
   letter-spacing:-4px;
 }
 
 nav ul li {
   display:inline-block;
-  border-top:{{navborder}}px solid;
-  padding: {{navborder}}px;
+  /* border-top:{{navborder}}px solid; */
+  padding: 0 2%;
+  /* padding: {{navborder}}px 2%; */
   *display:inline;
   zoom:1;
   line-height:normal;
@@ -148,18 +150,19 @@ nav ul li {
 
 nav ul li a, nav ul li a:visited {
   display:block;
-  color:#111;
+  color:#fff;
   text-decoration:none;
   font-weight:600;
   opacity:.75;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
   opacity:1
 }
 nav ul li:hover, nav ul li.active {
-  border-top-width: {{navborder_active}}px;
-  padding-top: 0;
+  opacity:1
+  /* border-top-width: {{navborder_active}}px; */
+  /* padding-top: 0; */
 }
 
 
@@ -170,8 +173,8 @@ nav ul li:hover, nav ul li.active {
   display:block;
   width:100%;
   min-height:300px;
-  padding:210px 0;
-  background:url(img/bgnoise.png);
+  padding:10px 0 200px;
+  /* background:url(img/bgnoise.png); */
   /* generated noise from noisetexturegenerator.com */
 }
 
@@ -179,12 +182,16 @@ nav ul li:hover, nav ul li.active {
     padding-top: 140px;
 }
 
+.section:last-of-type {
+    padding-bottom: 1000px;
+}
+
 
 #footer {
   padding: 8px 0;
   min-height:0;
   text-align:center;
-  background-color:#2e2e2e;
+  background-color:#0fbfcf;
   background-image:none;
 }
 #footer .container p { font-size:13px; margin:0; }
