@@ -1,0 +1,353 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <script>
+      window.onscroll = function() {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("back-to-top-btn").style.display = "block";
+        } else {
+          document.getElementById("back-to-top-btn").style.display = "none";
+        }
+      }
+      function goToTop() {
+        window.scrollTo(0, 0);
+      }
+
+      function myFunction() {
+        var x = document.getElementById("section0");
+        if (x.className === "top-menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "top-menu";
+        }
+      }
+    </script>
+    <style>
+      body {
+/*         padding: none; */
+/*         margin: none; */
+        font-family: "Montserrat", sans-serif;
+      }
+      /* Add styles for sections */
+      /* .section-top {
+        padding: 10px;
+        text-align: center;
+        border: none;
+        margin: -8px;
+        background-color: #FAB39B;
+      } */
+
+      .section {
+/*         height: 500px; */
+        padding: 30px;
+        text-align: center;
+        border: none;
+        margin: -8px;
+
+      }
+      /* Change background color for first section */
+      .section-red {
+        background-color: #d36569;
+        color: #ffffff;
+      }
+      /* Change background color for second section */
+      .section-white {
+        background-color: #ffffff;
+
+      }
+      .section2 p {
+        color: #666666;
+      }
+      .section2 h1 {
+        color: #d36569;
+      }
+      /* Add styles for top menu */
+      .top-menu {
+        position:fixed;
+        top: 0;
+        right: 0;
+        left:0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px;
+        margin: -8px;
+        background-color:#d36569;
+        overflow: hidden;
+
+      }
+      .top-menu a{
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+      .top-menu a:hover{
+        text-decoration: underline;
+
+      }
+      .top-menu .icon {
+        display: none;
+      }
+      
+      /* Add styles for menu items */
+      /* .menu-item {
+        margin-left: 20px;
+        cursor: pointer;
+      } */
+      .p-centered {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Style buttons */
+      .btn {
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #d36569;
+        color: #ffffff;
+        border: none;
+        margin: 30px;
+        cursor: pointer;
+          border-radius: 3px;
+           letter-spacing: 2px;
+
+      }
+      /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #d36569;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #2196F3; */
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.left-label {
+  position: absolute;
+  left: -73px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color:#ffffff;
+  font-weight: bold;
+}
+
+.right-label {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color:#ffffff;
+
+}
+.circular-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+.sub-title {
+  color:#fab39b;
+  padding: 0;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+p {
+  font-size:20px;
+}
+.p-intro {
+  font-size: 35px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+img {
+  padding: 30px;
+}
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+}
+h3 {
+  text-align: left;
+
+}
+/* #back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border-color:#d36569;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* box-shadow: 0 0 10px rgba(224, 224, 224, 0.2); */
+}
+
+#back-to-top-btn i {
+  font-size: 30px;
+  color: #d36569;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the top-menu (.icon) */
+@media screen and (max-width: 600px) {
+  .top-menu a {display: none;}
+  .top-menu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the top-menu with JavaScript when the user clicks on the icon. This class makes the top-menu look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .top-menu.responsive {position: relative;}
+  .top-menu.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top-menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+    <button id="back-to-top-btn" onclick="goToTop()">
+      <i class="fas fa-arrow-up"></i>
+      </button>
+
+    <!-- Add top menu -->
+    <div class="top-menu" id="section0">
+      <!-- Add menu items with links to sections -->
+      <!-- <div class="menu-item"> -->
+        <a href="#section0">
+          Home
+        </a>
+      <!-- </div> -->
+      <!-- <div class="menu-item"> -->
+        <a href="#section3">
+          Offerings
+        </a>
+      <!-- </div> -->
+      <!-- <div class="menu-item"> -->
+        <a href="#section3">Blog</a>
+      <!-- </div> -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-- Add first section -->
+    <div class="section section-red" id="section1">
+      <h1>fabian kirsch</h1>
+      <h2 class="sub-title">.co<span style="font-weight: normal;">llaborate</span></h2>
+      <p class="p-intro">I imagine a world in which we act from our hearts, collaborate with ease and collectively steward our shared global resources.</p>
+    </div>
+    <div class="section section-red" id="section1">
+    <label class="switch">
+      <div class="left-label"> English</div>
+      <input type="checkbox" onclick="location.href='file:///home/fabian/repositories/fabiankirsch.co%20chatgpt%20generate%20html%20code/de/index.html'">
+      <span class="slider round"></span>
+      <div class="right-label"> Deutsch </div>
+    </label>
+    </div>
+    <!-- Add second section -->
+    <div class="section section-white" id="section2">
+      <img src="../images/profile photo fabian kirsch - quadrat.jpg" class="circular-image">
+
+      <p class="p-centered"> Hi, I'm Fabian. I thrive at the conjunction of our deep humanness and relational systems design. I offer coaching and consulting to those who want to fundamentally change the systems within which we live and work - and not just get ahead in the current one.</p>
+      <div class="buttons">
+        <button class="btn">🖵 meet fabian</button>
+        <button class="btn">🖂 write fabian</button>
+      </div>
+    </div>
+    <!-- Add third section -->
+    <div class="section section-red" id="section3">
+      <h1>What I can help you with</h1>
+      <h3>Vision Mobilisation</h3>
+    </div>
+  </body>
+</html>
